@@ -85,7 +85,7 @@ public class TestRoutage {
     private static EmbeddingStore<TextSegment> creerEmbeddingStore(
             String nomFichier, EmbeddingModel embeddingModel
     ) throws URISyntaxException {
-        URL fileUrl = RagNaif.class.getResource(nomFichier);
+        URL fileUrl = TestRoutage.class.getResource(nomFichier);
         Path path = Paths.get(fileUrl.toURI());
 
         DocumentParser documentParser = new ApacheTikaDocumentParser();
